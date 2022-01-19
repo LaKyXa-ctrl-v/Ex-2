@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка для вітання! =)</title>
+</head>
+
+<body>
+    <div class="features">
+        <h1>Напиши сюди своє ім'я!</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name }}
+            <span>{{ error }}</span>
+            <input type="text" placeholder="Як тебе можна звати?" name="name">
+            <button class="btn btn-success" type="submit">Привітатись!</button>
+        </form>
+    </div>
+</body>
+
+</html>
