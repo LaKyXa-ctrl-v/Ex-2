@@ -6,10 +6,14 @@ from django.forms import ModelForm, TextInput
 class PersonForm(ModelForm):
     class Meta:
         model = Person
-        fields = ["name", ]
+        fields = ["first_name", "last_name"]
 
         widgets = {
-            "title": TextInput(attrs={
-                'placeholder': "Як тебе можна звати?"
-            })
+            "first_name": TextInput(attrs={
+                'placeholder': "Ім'я"
+            }),
+            "last_name": TextInput(attrs={
+                "placeholder": 'Призвіще'
+            }
+            )
         }

@@ -14,9 +14,11 @@
         <form method="post">
             {% csrf_token %}
             {{ form.name }}
-            <span>{{ error }}</span>
-            <input type="text" placeholder="Як тебе можна звати?" name="name">
+
+            <input type="text" placeholder="Ім'я" name="first_name">
+            <input type="text" placeholder="Призвіще" name="last_name">
             <button class="btn btn-success" type="submit">Привітатись!</button>
+            <span>{{ error }}</span>
         </form>
     </div>
 </body>
